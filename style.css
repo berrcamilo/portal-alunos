@@ -1904,3 +1904,55 @@
     font-size: var(--font-size-xl);
   }
 }
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: all 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-level-2);
+  background: color-mix(in oklab, var(--color-primary) 6%, var(--color-surface));
+}
+
+@media (max-width: 768px) {
+
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .upcoming-class-card {
+    padding: var(--spacing-xl);
+  }
+
+  .activity-grid {
+    flex-direction: column;
+  }
+}
